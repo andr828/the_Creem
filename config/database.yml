@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: the_creem_dev
+
+test:
+  <<: *default
+  database: the_creem_test
+
+production:
+  <<: *default
+  host: <%= ENV['DATABASE_URL'] %>
+  login: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  database: <%= ENV['DATABASE_NAME'] %>

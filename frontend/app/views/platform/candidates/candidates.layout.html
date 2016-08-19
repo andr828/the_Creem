@@ -1,0 +1,103 @@
+<div ui-view="topbar-view"></div>
+<div id="views__landing">
+  <div class="body">
+    <div class="w-section">
+      <div class="for-div employer">
+        <div class="container w-row row-process">
+
+          <div class="w-col w-col-5">
+            <h2>Candidate Search For <strong>Bar Stuff</strong></h2>
+          </div>
+          <div class="w-col w-col-4">
+          </div>
+          <div class="w-col w-col-3">
+            <a>some images</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="w-row row-process" data-ix="arrows2">
+          <div class="w-col w-col-9">
+            <ul>
+              <li ng-repeat="x in vm.respond" >
+                <div class="one_candidate w-row">
+                  <div class="photo_box w-col-4 w-col"></div>
+                  <div class="review_box w-col-8 w-col"></div>
+                  <div class = "one_candidate_footer w-col">
+                    Description
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="w-col w-col-3">
+            <p>recommended</p>
+          </div>
+
+
+          <div class="w-col w-col-4">
+            <div class="fade4" data-ix="appear4">
+              <div class="appear4" data-ix="zeroopacity">
+                <div class="process-image _4"></div>
+              </div>
+            </div>
+            <div class="arrows2" data-ix="zeroopacity">
+              <div class="process-arrow _3"></div>
+            </div>
+            <h3>Create job listings.</h3>
+          </div>
+          <div class="w-col w-col-4">
+            <div class="fade5" data-ix="appear5">
+              <div class="appear5" data-ix="zeroopacity">
+                <div class="process-image _5"></div>
+              </div>
+            </div>
+            <div class="arrows2" data-ix="zeroopacity">
+              <div class="process-arrow _4"></div>
+            </div>
+            <h3>View applicants.</h3>
+          </div>
+          <div class="w-col w-col-4">
+            <div class="fade6" data-ix="appear6">
+              <div class="appear6" data-ix="zeroopacity">
+                <div class="process-image _6"></div>
+              </div>
+            </div>
+            <h3>Reach out instantly.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-section footer">
+
+      <div class="container">
+
+        <a class="w-inline-block footer-link" ng-click="vm.goToRegister()">
+          <div>REGISTER</div>
+        </a>
+        <a class="w-inline-block footer-link" href="#">
+          <div>Contact</div>
+        </a>
+        <a class="w-inline-block footer-link" href="#"><img src="images/landing/footer-logo.png" width="69">
+        </a>
+        <a class="w-inline-block footer-link" href="#">
+          <div>PRIVACY</div>
+        </a>
+        <a class="w-inline-block footer-link" href="#">
+          <div>TERMS OF USE</div>
+        </a>
+      </div>
+      <div class="legal-section">
+        <div class="w-clearfix container">
+          <a class="w-clearfix w-inline-block facebook-legal" href="https://www.facebook.com/pages/The-Creem/779674665441087" target="_blank">
+            <div class="follow-us">Follow us</div>
+          </a>
+          <div class="copyright">
+            <div>©2015 The Creem PTY LTD</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

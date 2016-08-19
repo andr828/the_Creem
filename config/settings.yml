@@ -1,0 +1,22 @@
+datetime_format:
+  default: '%-I:%M%p %d/%m/%Y'
+
+app:
+  name: 'the_creem'
+
+aws:
+  default: &aws_default
+    region: <%= ENV['DEFAULT_AWS_REGION'] || 'ap-southeast-2' %>
+  the_creem: &aws_the_creem
+    <<: *aws_default
+    access_key_id: <%= ENV['TC_AWS_ACCESS_KEY_ID'] %>
+    access_key_secret: <%= ENV['TC_AWS_SECRET_ACCESS_KEY'] %>
+    cdn_host: <%= ENV['TC_AWS_CDN_HOST'] %>
+
+refile:
+  aws:
+    <<: *aws_the_creem
+    bucket: <%= ENV['REFILE_AWS_BUCKET'] ||'the_creem' %>
+
+devise:
+  secret_key: <%= ENV['DEVISE_SECRET_KEY'] %>

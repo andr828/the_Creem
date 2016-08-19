@@ -1,0 +1,90 @@
+<md-content id="components__creem-login" class="md-padding" layout="row" ng-switch="vm.selectedForm" flex>
+  <!-- LOGIN FORM -->
+  <form name="vm.form.login" ng-submit="vm.login()" ng-switch-default flex>
+    <div layout="row">
+      <md-input-container class="md-block" flex>
+        <label>Email</label>
+        <input type="text" name="email" ng-model="vm.creds.email" required>
+        <div ng-messages="vm.form.login.email.$error">
+          <div ng-message="required">Email is required.</div>
+          <div ng-message="failed">Incorrect email or password.</div>
+        </div>
+      </md-input-container>
+      <md-input-container class="md-block" flex>
+        <label>Password</label>
+        <input type="password" name="password" ng-model="vm.creds.password" required>
+        <div ng-messages="vm.form.login.password.$error">
+          <div ng-message="required">Password is required.</div>
+          <div ng-message="failed">Incorrect email or password.</div>
+        </div>
+      </md-input-container>
+    </div>
+    <div layout="row">
+      <span flex></span>
+      <md-button class="md-raised md-accent" type="submit" flex="50">Login</md-button>
+      <span flex></span>
+    </div>
+  </form>
+
+  <!-- REGISTER FORM -->
+  <form name="vm.form.register" ng-submit="vm.register()" ng-switch-when="register" flex>
+    <div layout="row" layout-align="center center" class="md-padding">
+      <p>Which account type would you like to create?</p>
+    </div>
+    <div layout="row">
+      <div flex></div>
+      <md-button class="md-raised md-primary" ng-class="{ 'md-primary': vm.selectedType('candidate'), 'md-default': vm.selectedType('employer') }" ng-click="vm.selectEmployee()" flex="40">Employee</md-button>
+      <md-button class="md-raised md-default" ng-class="{ 'md-primary': vm.selectedType('employer'), 'md-default': vm.selectedType('candidate') }" ng-click="vm.selectEmployer()" flex="40">Employer</md-button>
+      <div flex></div>
+    </div>
+    <div layout="row">
+      <md-input-container class="md-block" flex>
+        <label>First Name</label>
+        <input type="text" name="firstName" ng-model="vm.user.entity_attributes.first_name" required>
+        <div ng-messages="vm.form.register.firstName.$error">
+          <div ng-message="required">First name is required.</div>
+        </div>
+      </md-input-container>
+      <md-input-container class="md-block" flex>
+        <label>Last Name</label>
+        <input type="text" name="lastName" ng-model="vm.user.entity_attributes.last_name" required>
+        <div ng-messages="vm.form.register.lastName.$error">
+          <div ng-message="required">Last name is required.</div>
+        </div>
+      </md-input-container>
+    </div>
+    <div layout="row" ng-show="vm.selectedType('employer')">
+      <md-input-container class="md-block" flex>
+        <label>Business Name</label>
+        <input type="text" name="businessName" ng-model="vm.user.entity_attributes.business_name" ng-required="vm.selectedType('employer')">
+        <div ng-messages="vm.form.register.businessName.$error">
+          <div ng-message="required">Business name is required.</div>
+        </div>
+      </md-input-container>
+    </div>
+    <div layout="row">
+      <md-input-container class="md-block" flex>
+        <label>Email</label>
+        <input type="text" name="email" ng-model="vm.creds.email" required>
+        <div ng-messages="vm.form.register.email.$error">
+          <div ng-message="required">Email is required.</div>
+        </div>
+      </md-input-container>
+    </div>
+    <div layout="row">
+      <md-input-container class="md-block" flex>
+        <label>Password</label>
+        <input type="password" name="password" ng-model="vm.creds.password" required>
+        <div ng-messages="vm.form.register.password.$error">
+          <div ng-message="required">Password is required.</div>
+        </div>
+      </md-input-container>
+    </div>
+    <div layout="row">
+      <span flex></span>
+      <md-button class="md-default" ng-click="vm.backToLoginForm()" flex="30">Back</md-button>
+      <md-button class="md-raised md-accent" type="submit" flex="70">Register</md-button>
+      <span flex></span>
+    </div>
+  </form>
+</md-content>

@@ -1,0 +1,26 @@
+{
+  "name": "creem-angular",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular-ui-router": "~0.2.15",
+    "angular-material": "^1.0.9",
+    "material-design-iconfont": "~0.0.2",
+    "malarkey": "yuanqing/malarkey#~1.3.1",
+    "angular-toastr": "~1.5.0",
+    "moment": "~2.10.6",
+    "animate.css": "~3.4.0",
+    "angular": "~1.5.0",
+    "AngularDevise": "angular-devise#^1.3.0",
+    "lodash": "~3.10.0",
+    "angular-google-maps": "2.3.2",
+    "angular-messages": "^1.5.3",
+    "restangular": "~1.4.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.2"
+  },
+  "resolutions": {
+    "angular": "~1.5.0",
+    "lodash": "~3.10.0"
+  }
+}

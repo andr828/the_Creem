@@ -37,7 +37,9 @@
     </div>
     <div layout="row">
       <md-input-container class="md-block" flex>
-        <label>First Name</label>
+        <label>
+          First Name
+        </label>
         <input type="text" name="firstName" ng-model="vm.user.entity_attributes.first_name" required>
         <div ng-messages="vm.form.register.firstName.$error">
           <div ng-message="required">First name is required.</div>

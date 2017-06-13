@@ -42,4 +42,22 @@
       templateUrl: 'app/views/platform/topbar/topbar.layout.html'
       controller: 'TopbarController'
       controllerAs: 'vm'
+          .state 'platform.candidates',{
+      url: '/candidates'
+      views:{
+      '':
+        templateUrl: 'app/views/platform/candidates/candidates.layout.html'
+        controller: 'CandidatesController'
+        controllerAs: 'vm'
+      'topbar-view@platform.candidates':
+        templateUrl: 'app/views/platform/topbar/topbar.layout.html'
+        controller: 'TopbarController'
+        controllerAs: 'vm'
+      }
+    }
+    .state 'platform.topbar',
+      url: '/topbar'
+      templateUrl: 'app/views/platform/topbar/topbar.layout.html'
+      controller: 'TopbarController'
+      controllerAs: 'vm'
 

@@ -28,9 +28,6 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Max: 200
 
-Metrics/MethodLength:
-  Max: 12
-
 # Enabled disabled Cops
 Style/CollectionMethods:
   Enabled: true

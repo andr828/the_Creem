@@ -17,13 +17,6 @@
       controllerAs: 'main'
       # data:
         # authorizedRoles: [USER_ROLES.admin, USER_ROLES.employer, USER_ROLES.employee]
-    .state 'platform.profile',
-      url: '/profile'
-      templateUrl: 'app/views/platform/profile/profile.layout.html'
-      controller: 'ProfileController'
-      controllerAs: 'vm'
-      data:
-        heading: 'My Profile'
     .state 'platform.candidates',{
       url: '/candidates'
       views:{

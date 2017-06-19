@@ -36,4 +36,8 @@ class ApplicationController < ActionController::Base
     Rails.logger.info "LOG Responding with #{response.status.inspect} => #{response.body.inspect}"
   end
 
+  def log_response
+    Rails.logger.info "LOG Responding with #{response.status.inspect} => #{response.body.inspect}"
+  end
+
 end

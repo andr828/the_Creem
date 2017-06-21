@@ -35,6 +35,8 @@ class Entity < ActiveRecord::Base
   validates_presence_of :last_name
   validates_presence_of :type
   validates_presence_of :account
+  validates_presence_of :type
+  validates_presence_of :account
 
   # == Scopes ===============================================================
 

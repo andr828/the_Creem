@@ -86,5 +86,20 @@
       <md-button class="md-raised md-accent" type="submit" flex="70">Register</md-button>
       <span flex></span>
     </div>
+    <div layout="row">
+      <md-input-container class="md-block" flex>
+        <label>Password</label>
+        <input type="password" name="password" ng-model="vm.creds.password" required>
+        <div ng-messages="vm.form.register.password.$error">
+          <div ng-message="required">Password is required.</div>
+        </div>
+      </md-input-container>
+    </div>
+    <div layout="row">
+      <span flex></span>
+      <md-button class="md-default" ng-click="vm.backToLoginForm()" flex="30">Back</md-button>
+      <md-button class="md-raised md-accent" type="submit" flex="70">Register</md-button>
+      <span flex></span>
+    </div>
   </form>
 </md-content>

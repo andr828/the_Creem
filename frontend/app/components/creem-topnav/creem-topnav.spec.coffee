@@ -26,3 +26,12 @@
 
   #   expect(vm.relativeDate).toEqual jasmine.any String
   #   expect(vm.relativeDate).toEqual 'a day ago'
+
+  # it 'should have isolate scope object with instanciate members', () ->
+  #   expect(vm).toEqual jasmine.any Object
+
+  #   expect(vm.creationDate).toEqual jasmine.any Number
+  #   expect(vm.creationDate).toEqual timeInMs
+
+  #   expect(vm.relativeDate).toEqual jasmine.any String
+  #   expect(vm.relativeDate).toEqual 'a day ago'

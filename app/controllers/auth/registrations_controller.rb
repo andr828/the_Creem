@@ -7,6 +7,13 @@ class Auth::RegistrationsController < Devise::RegistrationsController
     render json: exception, status: 422
   end
 
+  # PUT /auth/users
+  def update
+    super do |resource|
+      Rails.logger.info "LOG registrations#update: #{resource.inspect}"
+    end
+  end
+
   # POST /auth/users
   def create
     super do |resource|
@@ -15,13 +22,6 @@ class Auth::RegistrationsController < Devise::RegistrationsController
         resp = resource.attributes.slice(*user_attrs).merge(entity: resource.entity.attributes.slice(*entity_attrs))
         return render json: resp
       end
-    end
-  end
-
-  # PUT /auth/users
-  def update
-    super do |resource|
-      Rails.logger.info "LOG registrations#update: #{resource.inspect}"
     end
   end
 

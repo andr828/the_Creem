@@ -12,6 +12,10 @@
   AuthProvider.registerMethod('POST')
   AuthProvider.registerPath('/auth/users')
 
+  # Customize register
+  AuthProvider.registerMethod('POST')
+  AuthProvider.registerPath('/auth/users')
+
 
 @TheCreem.config ($mdThemingProvider)->
   creemOrangeMap = $mdThemingProvider.extendPalette('deep-orange', {

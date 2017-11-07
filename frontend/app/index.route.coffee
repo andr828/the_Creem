@@ -63,6 +63,11 @@
         controller: 'TopbarController'
         controllerAs: 'vm'
       }
+      'topbar-view@platform.candidates':
+        templateUrl: 'app/views/platform/topbar/topbar.layout.html'
+        controller: 'TopbarController'
+        controllerAs: 'vm'
+      }
     }
     .state 'platform.topbar',
       url: '/topbar'

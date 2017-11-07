@@ -31,6 +31,10 @@ FactoryGirl.define do
       type :Candidate
     end
 
+    trait :candidate do
+      type :Candidate
+    end
+
     factory :entity_candidate, traits: [:candidate]
     factory :entity_employer, traits: [:employer]
   end

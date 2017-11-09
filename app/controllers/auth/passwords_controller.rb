@@ -26,9 +26,4 @@ class Auth::PasswordsController < Devise::PasswordsController
     end
   end
 
-  def update
-    super do |resource|
-      Rails.logger.info "LOG passwords#update: #{resource.inspect}"
-    end
-  end
 end

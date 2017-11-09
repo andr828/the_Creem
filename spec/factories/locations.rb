@@ -12,4 +12,8 @@ FactoryGirl.define do
   factory :location do
     metadata "MyText"
   end
+
+  factory :location do
+    metadata "MyText Here"
+  end
 end

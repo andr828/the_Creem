@@ -32,6 +32,24 @@ class Auth::RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  # POST /auth/users
+  def create
+    super do |resource|
+      if resource.persisted? && (resource.entity && resource.entity.persisted?)
+        # TODO: better way to build nested_attributes response?
+        resp = resource.attributes.slice(*user_attrs).merge(entity: resource.entity.attributes.slice(*entity_attrs))
+        return render json: resp
+      end
+    end
+  end
+
+  # DELETE /auth/users
+  def destroy
+    super do |resource|
+      Rails.logger.info "LOG registrations#destroy: #{resource.inspect}"
+    end
+  end
+
   private
 
   def user_attrs
@@ -45,7 +63,7 @@ class Auth::RegistrationsController < Devise::RegistrationsController
     user[:entity_attributes][:type] = (user[:entity_attributes][:type] || '').camelize
     user
   end
-  
+
   def entity_attrs
     %w(id type first_name last_name business_name metadata created_at updated_at)
   end
